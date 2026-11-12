@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--------- Website title ----------->
+    <title>Sip Station | Artisanal Coffee & Brews</title>
+    <!----------------------------------->
+
+    <!----------- Meta data ------------->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sip Station Team">
+    <meta name="description"
+        content="Welcome to Sip Station! We specialize in serving the finest artisanal coffee drinks, handcrafted brews, and warm community vibes. Visit us for an unforgettable coffee experience.">
+    <meta name="keywords"
+        content="coffee, cafe, Sip Station, artisanal brews, espresso, cappuccino, latte, coffee shop, cozy cafe, coffeehouse, Seattle coffee">
+    <!----------------------------------->
+
+    <!------------- Icons --------------->
+    <link rel="stylesheet" href="./assets/misc/fontawesome-free-6.5.1-web/css/all.css">
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/logo.png">
+    <!----------------------------------->
+
+    <!---------- Stylesheets ------------>
+    <link rel="stylesheet" href="./CSS/global/fonts.css">
+    <link rel="stylesheet" href="./CSS/global/boilerplate.css">
+    <link rel="stylesheet" href="./CSS/global/custom-props.css">
+    <link rel="stylesheet" href="./CSS/global/typography.css">
+
+    <link rel="stylesheet" href="./CSS/sections/header.css">
+    <link rel="stylesheet" href="./CSS/sections/hero.css">
+    <link rel="stylesheet" href="./CSS/sections/menu.css">
+    <link rel="stylesheet" href="./CSS/sections/special-drinks.css">
+    <link rel="stylesheet" href="./CSS/sections/plans.css">
+    <link rel="stylesheet" href="./CSS/sections/contact.css">
+    <link rel="stylesheet" href="./CSS/sections/controls.css">
+    <link rel="stylesheet" href="./CSS/sections/footer.css">
+
+    <link rel="stylesheet" href="./CSS/utils/buttons.css">
+    <link rel="stylesheet" href="./CSS/utils/misc.css">
+    <!----------------------------------->
+
+    <!----------- JavaScript ------------>
+    <script type="module" src="./JS/app.js"></script>
+    <!----------------------------------->
+</head>
+
+<body>
+    <!------------- Header -------------->
+    <header class="expanded">
+        <!--------- Main navigation --------->
+        <nav class="main-nav" aria-label="primary navigation">
+            <!-------- Navigation wrapper --------->
+            <div class="main-nav__wrapper" id="primary-navigation">
+                <!------- Navigation branding ------->
+                <ul class="main-nav__branding">
+                    <!---------- Website logo ----------->
+                    <img class="main-nav__img-logo" src="./assets/imgs/logo.png"
+                        alt="Sip Station logo: A steaming cup of artisanal coffee.">
+                    <!----------------------------------->
+
+                    <!---------- Website title ---------->
+                    <h1><a class="main-nav__title" href="#hero">Sip Station</a></h1>
+                    <!----------------------------------->
+                </ul>
+                <!----------------------------------->
+
+                <!--------- Hamburger menu ---------->
+                <button class="main-nav__hamburger-menu closed" aria-label="main navigation menu"
+                    aria-controls="primary-navigation" aria-expanded="false">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+                <!----------------------------------->
+
+                <!--------- Navigation list --------->
+                <ul class="main-nav__list">
+                    <li class="current main-nav__list-item">
+                        <button>
+                            <a class="current main-nav__link" href="#hero" aria-current="page"
+                                aria-label="link to scroll to the home section">
+                                <i class="main-nav__icon fa fa-home" aria-hidden="true"></i>Home
+                            </a>
+                        </button>
+                    </li>
+
+                    <li class="main-nav__list-item">
+                        <button>
+                            <a class="main-nav__link" href="#menu" aria-label="link to scroll to the menu section">
+                                <i class="main-nav__icon fa fa-cutlery" aria-hidden="true"></i>Menu
+                            </a>
+                        </button>
+                    </li>
+
+                    <li class="main-nav__list-item">
+                        <button>
+                            <a class="main-nav__link" href="#special-drinks"
+                                aria-label="link to scroll to the special drinks section">
+                                <i class="main-nav__icon fa fa-coffee" aria-hidden="true"></i>Special
+                            </a>
+                        </button>
+                    </li>
+
+                    <li class="main-nav__list-item main-nav__list-item--plans">
+                        <button>
+                            <a class="main-nav__link main-nav__link--plans" href="#plans-section"
+                                aria-label="link to scroll to the plans section">
+                                <i class="main-nav__icon main-nav__icon--plans fa fa-gem" aria-hidden="true"></i>Plans
+                            </a>
+                        </button>
+                    </li>
+
+                    <li class="main-nav__list-item main-nav__list-item--contact">
+                        <button>
+                            <a class="main-nav__link main-nav__link--contact" href="#contact"
+                                aria-label="link to scroll to the contact section">
+                                <i class="main-nav__icon fa fa-envelope" aria-hidden="true"></i>Contact
+                            </a>
+                        </button>
+                    </li>
+                </ul>
+                <!----------------------------------->
+
+                <!---------- User options ----------->
+                <div class="main-nav__btns">
+                    <button class="main-nav__btn highlited-btn primary" aria-label="Login button"><i
+                            class="main-nav__icon fa fa-user" aria-hidden="true"></i>
+                        Login</button>
+                    <button class="main-nav__btn highlited-btn secondary" aria-label="Cart button"><i
+                            class="main-nav__icon fa fa-shopping-cart" aria-hidden="true"></i> Cart</button>
+                </div>
+                <!----------------------------------->
+            </div>
+            <!----------------------------------->
+        </nav>
+        <!----------------------------------->
+
+        <!------ Expand navbar button ------->
+        <div class="main-nav-controls">
+            <button id="js-expand-navbar" class="main-nav-controls__btn expand-navbar collapse" aria-hidden="true"
+                title="Show/hide menu">
+                <i class="fa fa-chevron-up"></i>
+            </button>
+
+            <button id="js-lock-navbar" class="main-nav-controls__btn" title="Lock current menu state">
+                <i class="fa fa-lock-open"></i>
+            </button>
+        </div>
+        <!----------------------------------->
+    </header>
+    <!----------------------------------->
+
+    <!--------- Main sections ----------->
+    <main>
+        <!-------- Hero section --------->
+        <section id="hero" class="hero">
+            <!-------- Hero slides ---------->
+            <div class="hero__slides slides">
+                <!------------- Slide --------------->
+                <div class="hero__slide slide active">
+                    <!---------- Slide image ------------>
+                    <img class="hero__slide-img" src="./assets/imgs/cappuccino.png"
+                        alt="Slide one image: Delicious creamy Cappuccino.">
+                    <!----------------------------------->
+                </div>
+                <!----------------------------------->
+
+                <!------------- Slide --------------->
+                <div class="hero__slide slide">
+                    <!---------- Slide image ------------>
+                    <img class="hero__slide-img" src="./assets/imgs/affogato3.jpg"
+                        alt="Slide one image: Delicious Affogato desert.">
+                    <!----------------------------------->
+                </div>
+                <!----------------------------------->
+
+                <!------------- Slide --------------->
+                <div class="hero__slide slide">
+                    <!---------- Slide image ------------>
+                    <img class="hero__slide-img" src="./assets/imgs/coffee-machiatto2.png"
+                        alt="Slide one image: Delicious Mocha with foam.">
+                    <!----------------------------------->
+                </div>
+                <!----------------------------------->
+
+                <!------------- Slide --------------->
+                <div class="hero__slide slide">
+                    <!---------- Slide image ------------>
+                    <img class="hero__slide-img" src="./assets/imgs/americano2.png"
+                        alt="Slide four image: Pouring a hot and delicious Doppio coffee into a cup.">
+                    <!----------------------------------->
+                </div>
+                <!----------------------------------->
+            </div>
+            <!----------------------------------->
+
+            <!---------- Slide content ---------->
+            <div class="hero__slide-content wrapper">
+                <!------------- Slider -------------->
+                <div class="hero__slider">
+                    <!------ Previous slide button ------>
+                    <button class="action-button prev" aria-label="previous slide">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <!----------------------------------->
+
+                    <!-------- Slider indicators -------->
+                    <div class="hero__slide-indicators">
+                        <button class="hero__slide-indicator slide-indicator checked" aria-label="slide 1"
+                            aria-current="step"></button>
+                        <button class="hero__slide-indicator slide-indicator" aria-label="slide 2"></button>
+                        <button class="hero__slide-indicator slide-indicator" aria-label="slide 3"></button>
+                        <button class="hero__slide-indicator slide-indicator" aria-label="slide 4"></button>
+                    </div>
+                    <!----------------------------------->
+
+                    <!-------- Next slide button -------->
+                    <button class="action-button next" aria-label="next slide">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                    <!----------------------------------->
+                </div>
+                <!----------------------------------->
+
+                <div class="hero__slide-description-wrapper">
+                    <!----------- Slide title ----------->
+                    <h3 class="hero__slide-title"><i class="fa-solid fa-mug-hot"></i> The Best Cappuccinos</h3>
+                    <!----------------------------------->
+
+                    <!------------- Ratings ------------->
+                    <div class="hero__ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <!----------------------------------->
+
+                    <!-------- Slide description -------->
+                    <p class="hero__slide-description">At <span class="highlight-two">Sip
+                            Station</span>, we elevate this beloved classic to new heights, crafting cappuccinos
+                        that embody the essence of artisanal perfection.
+                    </p>
+                    <!----------------------------------->
+
+                    <!---------- Slide buttons ---------->
+                    <div class="hero__slide-btns">
+                        <button class="hero__slide-btn highlited-btn primary">See drink</button>
+                        <button class="hero__slide-btn highlited-btn secondary">View in app</button>
+                    </div>
+                    <!----------------------------------->
+                </div>
+            </div>
+            <!----------------------------------->
+        </section>
+        <!----------------------------------->
+
+        <!--------- Menu section ---------->
+        <section id="menu" class="menu">
+            <div class="menu__title-wrapper section-title-wrapper">
+                <!---------- Drinks title ----------->
+                <h3 class="section-title">Wanna try our most <span class="highlight-three">delicious</span>
+                    drinks?</h3>
+                <!----------------------------------->
+            </div>
+
+            <div class="menu__content">
+                <!-------- Drinks carousel ---------->
+                <div class="menu__carousel">
+                    <!----- Previous slides buttons ----->
+                    <div class="menu__slider-btns-wrapper">
+                        <button class="menu__slider-btn prev"><i class="fa fa-chevron-left"></i></button>
+                        <button class="menu__slider-btn prev sliding-multiplier">
+                            <i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>
+                        </button>
+                    </div>
+                    <!----------------------------------->
+
+                    <!---------- Drinks list ------------>
+                    <ul class="menu__card-list">
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Cappuccino</h4>
+                            <p class="menu__card-description">
+                                Savor our cappuccino: espresso, steamed milk, foam; a classic Italian bliss.
+                            </p>
+                            <img class="menu__card-img" src="./assets/imgs/cappuccino.png" alt="cappuccino"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Doppio</h4>
+                            <p class="menu__card-description">
+                                Try Doppio: double the espresso, double the intensity. Pure coffee
+                                perfection.
+                            </p>
+                            <img class="menu__card-img" src="./assets/imgs/doppio3.jpg" alt="doppio" draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Latte</h4>
+                            <p class="menu__card-description">
+                                The Latte: where espresso meets steamed milk with a dash of foam. So creamy!
+                            </p>
+                            <img class="menu__card-img" src="./assets/imgs/latte2.png" alt="latte" draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Mocha</h4>
+                            <p class="menu__card-description">
+                                Our Mocha: a fusion of espresso, creamy milk, and chocolate... yes, chocolate!
+                            </p>
+                            <img class="menu__card-img" src="./assets/imgs/mocha2.jpg" alt="mocha" draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Americano</h4>
+                            <p class="menu__card-description">
+                                Yumm, Americano... It's like espresso's laid-back sibling, energizes you sip
+                                by sip!
+                            </p>
+                            <img class="menu__card-img" src="./assets/imgs/americano2.png" alt="americano"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Cortado</h4>
+                            <p class="menu__card-description">
+                                Espresso needs a smooth partner, and here it is! Mixed with steamed milk for a delight!
+                            </p>
+                            <img class="menu__card-img" src="./assets/imgs/cortado2.jpg" alt="cortado"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Lungo</h4>
+                            <p class="menu__card-description">
+                                Seeking excitement? Try Lungo: espresso's daring cousin, brewed longer for a bold ride!
+                            </p>
+                            <img class="menu__card-img" src="./assets/imgs/lungo2.png" alt="cappuccino"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Affogato</h4>
+                            <p class="menu__card-description">
+                                Savor our cappuccino: espresso, steamed milk, foam; a classic Italian bliss.
+                            </p>
+                            <img class="menu__card-img" src="./assets/imgs/affogato3.jpg" alt="affogato"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Frappé</h4>
+                            <p class="menu__card-description">
+                                Savor our cappuccino: espresso, steamed milk, foam; a classic Italian bliss.
+                            </p>
+                            <img class="menu__card-img" src="./assets/imgs/frappe2.jpg" alt=" frappé" draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Machiatto</h4>
+                            <p class="menu__card-description">
+                                Savor our cappuccino: espresso, steamed milk, foam; a classic Italian bliss.
+                            </p>
+                            <img class="menu__card-img" src="./assets/imgs/coffee-machiatto2.png" alt="machiatto"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Ristretto</h4>
+                            <p class="menu__card-description">
+                                Savor our cappuccino: espresso, steamed milk, foam; a classic Italian bliss.
+                            </p>
+                            <img class="menu__card-img" src="./assets/imgs/ristretto2.jpg" alt="Ristretto"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Flat white</h4>
+                            <div class="menu__card-info">
+                                
+                                <p class="menu__card-description">
+                                    Savor our cappuccino: espresso, steamed milk, foam; a classic Italian bliss.
+                                </p>
+                            </div>
+                            <img class="menu__card-img" src="./assets/imgs/flat-white2.jpg" alt="flat white"
+                                draggable="false">
+                        </li>
+                    </ul>
+                    <!----------------------------------->
+
+                    <!------- Next slides buttons ------->
+                    <div class="menu__slider-btns-wrapper">
+                        <button class="menu__slider-btn next"><i class="fa fa-chevron-right"></i></button>
+                        <button class="menu__slider-btn next sliding-multiplier">
+                            <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <!----------------------------------->
+                </div>
+                <!----------------------------------->
+
+                <!------- Search drink form --------->
+                <form class="menu__search-form">
+                    <label class="menu__search-label" for="coffee-search">What's your desire?</label>
+                    <div class="menu__search-bar">
+                        <input placeholder="Search a drink here..." class="menu__search-input" id="coffee-search"
+                            name="coffee-search" type="text">
+                        <button class="menu__search-btn"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+                <!----------------------------------->
+
+                <!-------- Drinks carousel ---------->
+                <div class="menu__carousel">
+                    <!----- Previous slides buttons ----->
+                    <div class="menu__slider-btns-wrapper">
+                        <button class="menu__slider-btn prev"><i class="fa fa-chevron-left"></i></button>
+                        <button class="menu__slider-btn prev sliding-multiplier">
+                            <i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>
+                        </button>
+                    </div>
+                    <!----------------------------------->
+
+                    <!---------- Drinks list ------------>
+                    <ul class="menu__card-list">
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Au Lait</h4>
+                            <img class="menu__card-img" src="./assets/imgs/cafe-au-lait2.jpg" alt="café au lait"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Cortadito</h4>
+                            <img class="menu__card-img" src="./assets/imgs/cortadito2.jpg" alt="cortadito"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Cubano</h4>
+                            <img class="menu__card-img" src="./assets/imgs/cubano2.jpg" alt="cubano" draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Eiskaffee</h4>
+                            <img class="menu__card-img" src="./assets/imgs/eiskaffee2.jpg" alt="eiskaffee"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">De Olla</h4>
+                            <img class="menu__card-img" src="./assets/imgs/cafe-de-olla2.jpg" alt="de olla"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Mazagran</h4>
+                            <img class="menu__card-img" src="./assets/imgs/mazagran2.jpg" alt="mazagran"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Red Eye</h4>
+                            <img class="menu__card-img" src="./assets/imgs/red-eye2.jpg" alt="red eye"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Gibraltar</h4>
+                            <img class="menu__card-img" src="./assets/imgs/gibraltar2.jpg" alt="gibraltar"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Piccolo</h4>
+                            <img class="menu__card-img" src="./assets/imgs/piccolo2.jpg" alt=" piccolo"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Con Leche</h4>
+                            <img class="menu__card-img" src="./assets/imgs/con-leche2.jpg" alt="con leche"
+                                draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Breve</h4>
+                            <img class="menu__card-img" src="./assets/imgs/breve2.jpg" alt="breve" draggable="false">
+                        </li>
+
+                        <li class="menu__card">
+                            <h4 class="menu__card-title">Galão</h4>
+                            <img class="menu__card-img" src="./assets/imgs/galao2.jpg" alt="galão" draggable="false">
+                        </li>
+                    </ul>
+                    <!----------------------------------->
+
+                    <!------- Next slides buttons ------->
+                    <div class="menu__slider-btns-wrapper">
+                        <button class="menu__slider-btn next"><i class="fa fa-chevron-right"></i></button>
+                        <button class="menu__slider-btn next sliding-multiplier">
+                            <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <!----------------------------------->
+                </div>
+                <!----------------------------------->
+            </div>
+            <!----------------------------------->
+        </section>
+        <!----------------------------------->
+
+        <!----- Special drinks section ------>
+        <section class="special-drinks" id="special-drinks">
+            <div class="special-drinks__title-wrapper section-title-wrapper">
+                <!------- Special rinks title ------->
+                <h3 class="section-title">These are <span class="highlight-three special-one">exclusively</span> for
+                    <span class="highlight-three special-one">you</span>!
+                </h3>
+                <!----------------------------------->
+            </div>
+
+            <div class="special-drinks__carousel">
+                <!------ Special drinks slides ------>
+                <div class="special-drinks__slides slides">
+                    <!------------- Slide --------------->
+                    <div class="special-drinks__slide slide active">
+                        <!---------- Slide image ------------>
+                        <img class="special-drinks__slide-img" src="./assets/imgs/blueberry-bliss-4.jpg"
+                            alt="Slide one image: Delicious creamy Cappuccino.">
+                        <!----------------------------------->
+                    </div>
+                    <!----------------------------------->
+
+                    <!------------- Slide --------------->
+                    <div class="special-drinks__slide slide">
+                        <!---------- Slide image ------------>
+                        <img class="special-drinks__slide-img" src="./assets/imgs/twilight-elixir-3.jpg"
+                            alt="Slide two image: Delicious Affogato desert.">
+                        <!----------------------------------->
+                    </div>
+                    <!----------------------------------->
+
+                    <!------------- Slide --------------->
+                    <div class="special-drinks__slide slide">
+                        <!---------- Slide image ------------>
+                        <img class="special-drinks__slide-img" src="./assets/imgs/sweet-love-4.jpg"
+                            alt="Slide three image: Delicious Mocha with foam.">
+                        <!----------------------------------->
+                    </div>
+                    <!----------------------------------->
+
+                    <!------------- Slide --------------->
+                    <div class="special-drinks__slide slide">
+                        <!---------- Slide image ------------>
+                        <img class="special-drinks__slide-img" src="./assets/imgs/cherry-y2.jpg"
+                            alt="Slide four image: Delicious Mocha with foam.">
+                        <!----------------------------------->
+                    </div>
+                    <!----------------------------------->
+                </div>
+                <!----------------------------------->
+
+                <!---------- Slide content ---------->
+                <div class="special-drinks__slide-content wrapper">
+                    <!------------- Slider -------------->
+                    <div class="special-drinks__slider">
+                        <!------ Previous slide button ------>
+                        <button class="special-drinks__change-slide action-button prev" aria-label="previous slide">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <!----------------------------------->
+
+                        <!-------- Slider indicators -------->
+                        <div class="special-drinks__slide-indicators slide-indicators">
+                            <button class="special-drinks__slide-indicator slide-indicator checked" aria-current="step"
+                                aria-label="slide 1"></button>
+                            <button class="special-drinks__slide-indicator slide-indicator"
+                                aria-label="slide 2"></button>
+                            <button class="special-drinks__slide-indicator slide-indicator"
+                                aria-label="slide 3"></button>
+                            <button class="special-drinks__slide-indicator slide-indicator"
+                                aria-label="slide 4"></button>
+                        </div>
+                        <!----------------------------------->
+
+                        <!-------- Next slide button -------->
+                        <button class="special-drinks__change-slide action-button next" aria-label="next slide">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                        <!----------------------------------->
+                    </div>
+                    <!----------------------------------->
+
+                    <div class="special-drinks__slide-description-wrapper">
+                        <!----------- Slide title ----------->
+                        <h3 class="special-drinks__slide-title"><i class="fa-solid fa-mug-hot"></i> Blueberry Bliss
+                        </h3>
+                        <!----------------------------------->
+
+                        <!------------- Ratings ------------->
+                        <div class="special-drinks__ratings">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+
+                        <!-------- Slide description -------->
+                        <p class="special-drinks__slide-description">Crafted with the finest blueberries, this
+                            enchanting
+                            concoction offers a burst of fruity sweetness harmonized with the smooth richness of our
+                            signature coffee blend.
+                        </p>
+                        <!----------------------------------->
+
+                        <!---------- Slide buttons ---------->
+                        <div class="special-drinks__slide-btns">
+                            <button class="special-drinks__slide-btn highlited-btn primary">See drink</button>
+                            <button class="special-drinks__slide-btn highlited-btn secondary">View in app</button>
+                        </div>
+                        <!----------------------------------->
+                    </div>
+                </div>
+                <!----------------------------------->
+            </div>
+        </section>
+        <!----------------------------------->
+
+        <!---------- Plans section ---------->
+        <section class="plans-section" id="plans-section">
+            <div class="section-title-wrapper">
+                <!--------- Plans section title ---------->
+                <h2 class="section-title">Join us today to enjoy <span class="highlight-three">the best</span> coffee
+                    experience!</span></h2>
+                <!----------------------------------->
+            </div>
+
+            <div class="plans-section__cards">
+                <div class="plans-section__card plans-section__card--silver-plan">
+                    <!----------- Card title ------------>
+                    <h2 class="plans-section__card-title">Silver</h2>
+                    <!----------------------------------->
+
+                    <!------- Plan features list -------->
+                    <ul class="plans-section__card-list plans-section__card-list--silver-plan">
+                        <li class="plans-section__card-list-item">Special drinks <i class="fa fa-check"></i></li>
+                        <li class="plans-section__card-list-item">Special discounts <i class="fa fa-check"></i></li>
+                        <li class="plans-section__card-list-item">Surprise gifts <i class="fa fa-times"></i></li>
+                        <li class="plans-section__card-list-item">Free drinks in special occasions <i
+                                class="fa fa-times"></i></li>
+                        <li class="plans-section__card-list-item">Free pastries and savories <i class="fa fa-times"></i>
+                        </li>
+                        <li class="plans-section__card-list-item">Include a familiar or friend <i
+                                class="fa fa-times"></i></li>
+                    </ul>
+                    <!----------------------------------->
+
+                    <!---------- Card buttons ----------->
+                    <div class="plans-section__card-btns">
+                        <!----- Prices dropdown button ------>
+                        <button
+                            class="plans-section__card-btn plans-section__card-btn--dropdown plans-section__card-btn--silver-plan">
+                            <i class="fa fa-chevron-down"></i> &dollar;25
+                        </button>
+                        <!----------------------------------->
+
+                        <!------- Add to cart button -------->
+                        <button
+                            class="plans-section__card-btn plans-section__card-btn--add-cart plans-section__card-btn--silver-plan">
+                            <i class="fa fa-shopping-cart"></i> Add to cart
+                        </button>
+                        <!----------------------------------->
+                    </div>
+                    <!----------------------------------->
+
+                    <!----------- Card image ------------>
+                    <img src="./assets/imgs/silver.jpg" alt="silver plan image">
+                    <!----------------------------------->
+                </div>
+
+                <div class="plans-section__card plans-section__card--diamond-plan">
+                    <h2 class="plans-section__card-title">Diamond</h2>
+                    <!----------------------------------->
+
+                    <!------- Plan features list -------->
+                    <ul class="plans-section__card-list plans-section__card-list--diamond-plan">
+                        <li class="plans-section__card-list-item">Special drinks <i class="fa fa-check"></i></li>
+                        <li class="plans-section__card-list-item">Special discounts <i class="fa fa-check"></i></li>
+                        <li class="plans-section__card-list-item">Surprise gifts <i class="fa fa-check"></i></li>
+                        <li class="plans-section__card-list-item">Free drinks in special occasions <i
+                                class="fa fa-check"></i></li>
+                        <li class="plans-section__card-list-item">Free pastries and savories <i class="fa fa-check"></i>
+                        </li>
+                        <li class="plans-section__card-list-item">Include a familiar or friend <i
+                                class="fa fa-check"></i></li>
+                    </ul>
+                    <!----------------------------------->
+
+                    <!---------- Card buttons ----------->
+                    <div class="plans-section__card-btns">
+                        <!----- Prices dropdown button ------>
+                        <button
+                            class="plans-section__card-btn plans-section__card-btn--dropdown plans-section__card-btn--diamond-plan">
+                            <i class="fa fa-chevron-down"></i> &dollar;100
+                        </button>
+                        <!----------------------------------->
+
+                        <!------- Add to cart button -------->
+                        <button
+                            class="plans-section__card-btn plans-section__card-btn--add-cart plans-section__card-btn--diamond-plan">
+                            <i class="fa fa-shopping-cart"></i> Add to cart
+                        </button>
+                        <!----------------------------------->
+                    </div>
+                    <!----------------------------------->
+
+                    <!----------- Card image ------------>
+                    <img src="./assets/imgs/diamond.jpg" alt="diamond plan image">
+                    <!----------------------------------->
+                </div>
+
+                <div class="plans-section__card plans-section__card--gold-plan">
+                    <!----------- Card title ------------>
+                    <h2 class="plans-section__card-title">Gold</h2>
+                    <!----------------------------------->
+
+                    <!------- Plan features list -------->
+                    <ul class="plans-section__card-list plans-section__card-list--gold-plan">
+                        <li class="plans-section__card-list-item">Special drinks <i class="fa fa-check"></i></li>
+                        <li class="plans-section__card-list-item">Special discounts <i class="fa fa-check"></i></li>
+                        <li class="plans-section__card-list-item">Surprise gifts <i class="fa fa-check"></i></li>
+                        <li class="plans-section__card-list-item">Free drinks in special occasions <i
+                                class="fa fa-check"></i></li>
+                        <li class="plans-section__card-list-item">Free pastries and savories <i class="fa fa-times"></i>
+                        </li>
+                        <li class="plans-section__card-list-item">Include a familiar or friend <i
+                                class="fa fa-times"></i></li>
+                    </ul>
+                    <!----------------------------------->
+
+                    <!---------- Card buttons ----------->
+                    <div class="plans-section__card-btns">
+                        <!----- Prices dropdown button ------>
+                        <button
+                            class="plans-section__card-btn plans-section__card-btn--dropdown plans-section__card-btn--gold-plan">
+                            <i class="fa fa-chevron-down"></i> &dollar;50
+                        </button>
+                        <!----------------------------------->
+
+                        <!------- Add to cart button -------->
+                        <button
+                            class="plans-section__card-btn plans-section__card-btn--add-cart plans-section__card-btn--gold-plan">
+                            <i class="fa fa-shopping-cart"></i> Add to cart
+                        </button>
+                        <!----------------------------------->
+                    </div>
+                    <!----------------------------------->
+
+                    <!----------- Card image ------------>
+                    <img src="./assets/imgs/gold.jpg" alt="gold plan image">
+                    <!----------------------------------->
+                </div>
+            </div>
+        </section>
+        <!----------------------------------->
+
+        <!--------- Contact Section --------->
+        <section id="contact" class="contact-section">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">GET IN TOUCH | <span class="highlight-three">Contact Sip Station</span></h2>
+            </div>
+
+            <div class="contact__container">
+                <header class="contact__header">
+                    <p class="contact__header-subtitle">We'd Love to Hear From You</p>
+                    <h3 class="contact__header-title">Connect with Our Artisanal Brew Team</h3>
+                </header>
+
+                <div class="contact__grid">
+                    <!------- Contact Info Cards ------->
+                    <div class="contact__info-cards">
+                        <!-- Card 1: Direct & Alt Phones -->
+                        <div class="contact__card">
+                            <span class="contact__card-badge">Direct Line</span>
+                            <div class="contact__card-icon">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <h4 class="contact__card-title">Phone & Hotline</h4>
+                            <div class="contact__card-detail-group">
+                                <div>
+                                    <strong>Primary Order Line:</strong><br>
+                                    <a class="contact__link" href="tel:+15557477828">+1 (555) 747-7828</a>
+                                </div>
+                                <div>
+                                    <strong>Alternative Support Line:</strong><br>
+                                    <a class="contact__link" href="tel:+15557477829">+1 (555) 747-7829</a>
+                                </div>
+                                <div>
+                                    <strong>WhatsApp / SMS Concierge:</strong><br>
+                                    <a class="contact__link" href="https://wa.me/15557478326" target="_blank" rel="noopener noreferrer">+1 (555) 747-8326</a>
+                                </div>
+                                <div>
+                                    <strong>Toll-Free (US/CA):</strong><br>
+                                    <a class="contact__link" href="tel:18005557477">1 (800) 555-SIPS</a>
+                                </div>
+                            </div>
+                            <span class="contact__card-tag">Daily 6:00 AM – 10:00 PM EST</span>
+                        </div>
+
+                        <!-- Card 2: Direct & Alt Emails -->
+                        <div class="contact__card">
+                            <span class="contact__card-badge">2-Hr Response</span>
+                            <div class="contact__card-icon">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <h4 class="contact__card-title">Email Inboxes</h4>
+                            <div class="contact__card-detail-group">
+                                <div>
+                                    <strong>General Inquiries:</strong><br>
+                                    <a class="contact__link" href="mailto:hello@sipstation.com">hello@sipstation.com</a>
+                                </div>
+                                <div>
+                                    <strong>Alternative Care & Help:</strong><br>
+                                    <a class="contact__link" href="mailto:support@sipstation.com">support@sipstation.com</a>
+                                </div>
+                                <div>
+                                    <strong>Alternative Event & Catering:</strong><br>
+                                    <a class="contact__link" href="mailto:events@sipstation.com">events@sipstation.com</a>
+                                </div>
+                                <div>
+                                    <strong>Partnerships & Wholesale:</strong><br>
+                                    <a class="contact__link" href="mailto:partners@sipstation.com">partners@sipstation.com</a>
+                                </div>
+                            </div>
+                            <span class="contact__card-tag">Quick response guaranteed</span>
+                        </div>
+
+                        <!-- Card 3: Locations & Pickup Hubs -->
+                        <div class="contact__card">
+                            <span class="contact__card-badge">Seattle, WA</span>
+                            <div class="contact__card-icon">
+                                <i class="fa fa-location-dot" aria-hidden="true"></i>
+                            </div>
+                            <h4 class="contact__card-title">Stations & Pickups</h4>
+                            <div class="contact__card-detail-group">
+                                <div>
+                                    <strong>Flagship Roastery:</strong><br>
+                                    <span class="contact__link">104 Coffee Blvd, Suite 100, Seattle, WA 98101</span>
+                                </div>
+                                <div>
+                                    <strong>Alternative Uptown Station:</strong><br>
+                                    <span class="contact__link">742 Evergreen Ave, Seattle, WA 98109</span>
+                                </div>
+                                <div>
+                                    <strong>Alternative Metro Kiosk:</strong><br>
+                                    <span class="contact__link">452 Metro Concourse B, Seattle, WA 98104</span>
+                                </div>
+                            </div>
+                            <span class="contact__card-tag">Curbside & Drive-thru Available</span>
+                        </div>
+
+                        <!-- Card 4: Hours & Schedule -->
+                        <div class="contact__card">
+                            <span class="contact__card-badge">Fresh Daily</span>
+                            <div class="contact__card-icon">
+                                <i class="fa fa-clock" aria-hidden="true"></i>
+                            </div>
+                            <h4 class="contact__card-title">Operating Hours</h4>
+                            <div class="contact__card-detail-group">
+                                <div>
+                                    <strong>Monday – Friday:</strong><br>
+                                    <span>6:00 AM – 9:00 PM</span>
+                                </div>
+                                <div>
+                                    <strong>Saturday – Sunday:</strong><br>
+                                    <span>7:00 AM – 10:00 PM</span>
+                                </div>
+                                <div>
+                                    <strong>Alternative Holiday Hours:</strong><br>
+                                    <span>7:00 AM – 6:00 PM</span>
+                                </div>
+                                <div>
+                                    <strong>Mobile App Ordering:</strong><br>
+                                    <span class="highlight-three">Available 24/7 Online</span>
+                                </div>
+                            </div>
+                            <span class="contact__card-tag">Roasting starts at 5:00 AM</span>
+                        </div>
+                    </div>
+
+                    <!------- Interactive Contact Form ------->
+                    <div class="contact__form-card">
+                        <header class="contact__form-header">
+                            <h4 class="contact__form-title">Send Sip Station a Message</h4>
+                            <p class="contact__form-desc">
+                                Have an inquiry about our artisanal blends, dietary preferences, or private event catering? Submit your message and specify your preferred contact method.
+                            </p>
+                        </header>
+
+                        <form id="contact-form" class="contact__form">
+                            <div class="contact__form-row">
+                                <div class="contact__form-group">
+                                    <label class="contact__form-label" for="contact-name">Full Name *</label>
+                                    <input type="text" id="contact-name" name="name" class="contact__form-input" placeholder="e.g., Alex Morgan" required>
+                                </div>
+                                <div class="contact__form-group">
+                                    <label class="contact__form-label" for="contact-email">Email Address *</label>
+                                    <input type="email" id="contact-email" name="email" class="contact__form-input" placeholder="alex@example.com" required>
+                                </div>
+                            </div>
+
+                            <div class="contact__form-row">
+                                <div class="contact__form-group">
+                                    <label class="contact__form-label" for="contact-phone">Phone / WhatsApp <small>(Optional)</small></label>
+                                    <input type="tel" id="contact-phone" name="phone" class="contact__form-input" placeholder="+1 (555) 000-0000">
+                                </div>
+                                <div class="contact__form-group">
+                                    <label class="contact__form-label" for="contact-pref">Preferred Contact Method</label>
+                                    <select id="contact-pref" name="preferred_method" class="contact__form-select">
+                                        <option value="email" selected>Email Response</option>
+                                        <option value="phone">Alternative: Phone Call</option>
+                                        <option value="whatsapp">Alternative: WhatsApp Message</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="contact__form-group">
+                                <label class="contact__form-label" for="contact-subject">Inquiry Category</label>
+                                <select id="contact-subject" name="subject" class="contact__form-select">
+                                    <option value="general" selected>General Feedback & Questions</option>
+                                    <option value="coffee">Coffee Recommendation & Barista Advice</option>
+                                    <option value="catering">Alternative: Group Catering & Event Booking</option>
+                                    <option value="plans">Membership Plans & Subscription Care</option>
+                                    <option value="wholesale">Franchise & Wholesale Bean Distribution</option>
+                                </select>
+                            </div>
+
+                            <div class="contact__form-group">
+                                <label class="contact__form-label" for="contact-message">Your Message *</label>
+                                <textarea id="contact-message" name="message" class="contact__form-textarea" placeholder="How can Sip Station craft your coffee moment today?..." required></textarea>
+                            </div>
+
+                            <div class="contact__form-actions">
+                                <button type="submit" class="highlited-btn primary contact__form-btn" id="contact-submit-btn">
+                                    <i class="fa fa-paper-plane" aria-hidden="true"></i> Send Message
+                                </button>
+                                <span class="contact__form-note">
+                                    <i class="fa fa-shield-halved" aria-hidden="true"></i> Your privacy is safeguarded.
+                                </span>
+                            </div>
+
+                            <div id="contact-alert-success" class="contact__alert-success" role="alert">
+                                <i class="fa fa-circle-check" aria-hidden="true"></i>
+                                <strong>Message Sent Successfully!</strong> Thank you for reaching out to <strong>Sip Station</strong>. Our concierge will follow up via your preferred contact channel shortly.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!----------------------------------->
+    </main>
+    <!----------------------------------->
+
+    <!---- Scrolling control section ---->
+    <div id="#controls" class="controls">
+        <!-------- Scroll top button -------->
+        <button data-action="top" class="controls__scroll-btn action-button" title="Go to top"
+            aria-label="Go to the top of the page">
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </button>
+        <!----------------------------------->
+
+        <!------- Scroll bottom button ------>
+        <button data-action="bottom" class="controls__scroll-btn action-button active" title="Go to bottom"
+            aria-label="Go to the bottom of the page">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <!----------------------------------->
+    </div>
+    <!----------------------------------->
+
+    <!------------- Footer -------------->
+    <footer>
+        <nav class="footer-nav">
+            <div class="footer-nav__lists">
+                <!---------- Brand About Column ----------->
+                <div class="footer-nav__list">
+                    <h4 class="footer-nav__col-title">Sip Station</h4>
+                    <p class="footer-nav__text">Artisanal coffees, specialty cold brews, and premium beans roasted fresh daily in Seattle.</p>
+                    <p class="footer-nav__text"><i class="fa fa-mug-hot" aria-hidden="true"></i> Crafted for coffee lovers</p>
+                </div>
+
+                <!---------- Navigation links ----------->
+                <ul class="footer-nav__list">
+                    <h4 class="footer-nav__col-title">Explore</h4>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#menu">Drink Menu</a></li>
+                    <li><a href="#special-drinks">Special Blends</a></li>
+                    <li><a href="#plans-section">Membership Plans</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+
+                <!---------- Alternative Contact Details ----------->
+                <div class="footer-nav__list">
+                    <h4 class="footer-nav__col-title">Direct & Alt Contact</h4>
+                    <p class="footer-nav__text"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+15557477828">+1 (555) 747-7828</a></p>
+                    <p class="footer-nav__text"><i class="fa fa-phone-volume" aria-hidden="true"></i> <a href="tel:+15557477829">Alt: +1 (555) 747-7829</a></p>
+                    <p class="footer-nav__text"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:hello@sipstation.com">hello@sipstation.com</a></p>
+                    <p class="footer-nav__text"><i class="fa fa-headset" aria-hidden="true"></i> <a href="mailto:support@sipstation.com">Alt: support@sipstation.com</a></p>
+                </div>
+
+                <!---------- Location & Hours Column ----------->
+                <div class="footer-nav__list">
+                    <h4 class="footer-nav__col-title">Stations & Timing</h4>
+                    <p class="footer-nav__text"><i class="fa fa-location-dot" aria-hidden="true"></i> 104 Coffee Blvd, Seattle, WA</p>
+                    <p class="footer-nav__text"><i class="fa fa-store" aria-hidden="true"></i> Alt: 452 Metro Concourse B</p>
+                    <p class="footer-nav__text"><i class="fa fa-clock" aria-hidden="true"></i> Mon-Sun: 6:00 AM – 10:00 PM</p>
+                    <p class="footer-nav__text"><i class="fa fa-mobile-screen" aria-hidden="true"></i> App Ordering: 24/7</p>
+                </div>
+            </div>
+
+            <!------- Social media links -------->
+            <ul class="footer-nav__social">
+                <li><a href="#" aria-label="Sip Station on facebook"><i class="fa-brands fa-facebook"
+                            aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" aria-label="Sip Station on twitter/x"><i class="fa-brands fa-x-twitter"
+                            aria-hidden="true"></i></a></li>
+                <li><a href="#" aria-label="Sip Station on instagram"><i class="fa-brands fa-instagram"
+                            aria-hidden="true"></i></a></li>
+                <li><a href="#" aria-label="Download Sip Station app on apple app store"><i class="fa-brands fa-apple"
+                            aria-hidden="true"></i></a></li>
+                <li><a href="#" aria-label="Download Sip Station app on google play store"><i class="fa-brands fa-google-play"
+                            aria-hidden="true"></i></a></li>
+            </ul>
+            <!----------------------------------->
+
+            <!------- Copyright message --------->
+            <h4 class="footer-nav__copy-message">&copy; 2024–2026 | <span class="highlight-one">Sip Station</span> &bull; All Rights Reserved</h4>
+            <!----------------------------------->
+        </nav>
+    </footer>
+    <!----------------------------------->
+</body>
+
+</html>
